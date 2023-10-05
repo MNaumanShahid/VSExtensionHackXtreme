@@ -45,5 +45,10 @@
     "typescript": "^5.2.2",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "bert-as-service": "^1.0.1",
+    "python-shell": "^5.0.0",
+    "vscode": "^1.1.37"
   }
 }
