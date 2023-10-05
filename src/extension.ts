@@ -35,4 +35,10 @@ export function activate(context: vscode.ExtensionContext) {
       '.' // Trigger on any character
     )
   );
+  
+// Display a success message in the console.
+console.log('Your TypeScript Auto-Suggestion Extension is now active!');
+
+// You can also use vscode.window.showInformationMessage() to display a popup message.
+vscode.window.showInformationMessage('Your TypeScript Auto-Suggestion Extension is now active!');
 }

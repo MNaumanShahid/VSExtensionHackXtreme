@@ -9,13 +9,19 @@
 			"name": "Run Extension",
 			"type": "extensionHost",
 			"request": "launch",
-			"args": [
-				"--extensionDevelopmentPath=${workspaceFolder}"
-			],
-			"outFiles": [
-				"${workspaceFolder}/dist/**/*.js"
-			],
-			"preLaunchTask": "${defaultBuildTask}"
+			"runtimeExecutable": "${execPath}",
+    		"args": [
+      		"--extensionDevelopmentPath=${workspaceFolder}",
+      		"--extensionTestsPath=${workspaceFolder}/out/test/suite/index.js" // Updated path
+    		],
+    		"outFiles": [
+    	  	"${workspaceFolder}/out/test/**/*.js"
+    		],
+    		"preLaunchTask": "npm: compile",
+    		"sourceMaps": true,
+    		"smartStep": true,
+    		"stopOnEntry": false,
+    		"showDebugOutput": true
 		},
 		{
 			"name": "Extension Tests",
@@ -23,7 +29,7 @@
 			"request": "launch",
 			"args": [
 				"--extensionDevelopmentPath=${workspaceFolder}",
-				"--extensionTestsPath=${workspaceFolder}/out/test/suite/index"
+				"--extensionTestsPath=${workspaceFolder}/src/test/suite/index.ts" // Updated path
 			],
 			"outFiles": [
 				"${workspaceFolder}/out/**/*.js",
